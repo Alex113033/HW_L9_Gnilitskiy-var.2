@@ -14,13 +14,7 @@ class SpringViewController: UIViewController {
     @IBOutlet var labelAnimationInfo: UILabel!
     
     var springRandom = SettingsAnimation.animation()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-       
-    }
-    
-    
+   
     @IBAction func runAnimation(_ sender: SpringButton) {
         labelAnimationInfo.text = "Preset - \(springRandom.animation) \nCurve - \(springRandom.curve) \nSpeed - \(Int(springRandom.force)) \nDuration - \(round(springRandom.duration * 10) / 10)"
         
